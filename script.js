@@ -1,3 +1,19 @@
+// Tema: Ljust/mörkt läge
+document.addEventListener('DOMContentLoaded', function() {
+    const themeBtn = document.getElementById('themeToggleBtn');
+    const body = document.body;
+    // Kolla om användaren har ett sparat tema
+    if (localStorage.getItem('theme') === 'dark') {
+        body.classList.add('dark-mode');
+        themeBtn.textContent = '☀️ Ljust läge';
+    }
+    themeBtn.addEventListener('click', function() {
+        body.classList.toggle('dark-mode');
+        const dark = body.classList.contains('dark-mode');
+        themeBtn.textContent = dark ? '☀️ Ljust läge' : '🌙 Mörkt läge';
+        localStorage.setItem('theme', dark ? 'dark' : 'light');
+    });
+});
 const MAX_WRONG = 10;
 let selectedWord = '';
 let guessedLetters = [];
