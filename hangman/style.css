@@ -1,0 +1,26 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+#keyboard button {
+    margin: 2px;
+    min-width: 36px;
+    min-height: 36px;
+    font-size: 1.2rem;
+}
+#wordDisplay span {
+    display: inline-block;
+    width: 32px;
+    border-bottom: 2px solid #333;
+    margin: 0 2px;
+    text-align: center;
+    font-weight: bold;
+}
+#wordDisplay .correct {
+    color: green;
+}
+#wordDisplay .misplaced {
+    color: orange;
+}
+#wrongLetters {
+    font-size: 1.1rem;
+}
