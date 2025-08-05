@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
         themeBtn.textContent = dark ? '☀️ Ljust läge' : '🌙 Mörkt läge';
         localStorage.setItem('theme', dark ? 'dark' : 'light');
     });
+    // Starta spelet när DOM är klar
+    startGame();
 });
 const MAX_WRONG = 10;
 let selectedWord = '';
@@ -228,4 +230,3 @@ function startGame() {
     document.getElementById('restartBtn').classList.add('d-none');
 }
 
-window.onload = startGame;
